@@ -33,25 +33,26 @@ while not game_over:
     elif position == 3:
         print(descriptions[3])
     print("  0-3 - переход в комнаты\n"
-          "  -1 - действие")
-    action = int(input("Что дальше? "))
-    if action == -1:
+          "  e - действие")
+    action = input("Что дальше? ")
+    if action == "e":
         if position == 2:
             has_food = True
-            print("Вы взяли еду")
+            print("> Вы взяли еду")
         elif position == 1:
             if has_food:
                 has_key = True
-                print("Вы успешно взяли ключ")
+                print("> Вы успешно взяли ключ")
             else:
-                print("Вам не хватит сил, что бы забрать ключ у охранника")
+                print("> Вам не хватит сил, что бы забрать ключ у охранника")
         elif position == 3:
             if has_key:
                 game_over = True
-                print("Вы успешно вышли из замка")
+                print("> Вы успешно вышли из замка")
             else:
-                print("Дверь не открывается")
+                print("> Дверь не открывается")
         else:
-            print("Ничего не произошло")
-    elif action >= 0 and action <= 3:
-        position = action
+            print("> Ничего не произошло")
+    elif action == "0" or action == "1" or action == "2" or action == "3":
+        position = int(action)
+        print("> Переход в другую комнату")
