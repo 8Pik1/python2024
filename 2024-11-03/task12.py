@@ -12,8 +12,8 @@ hp2 = 110
 damage = 10
 
 print("Идя по тропинке вы видите дракона:")
-first = int(input("Кто атакует первым? (0 - игрок, 1 - дракон): "))
-if first == 1:
+first = input("Кто атакует первым? (0 - игрок, 1 - дракон): ")
+if first == "1":
     hp1 = hp1 - damage
     print("Дракон нанес урон:", damage)
 game_over = False
@@ -22,17 +22,17 @@ while not game_over:
     print("Ваше здоровье:",hp1)
     print("Здоровье дракона:", hp2)
 
-    action = int(input("Как будем атакавать? - (0 - 1): "))
-    if action == 0:
+    action = input("Как будем атакавать? - (0 - 1): ")
+    if action == "0":
         hp2 = hp2 - damage
         print(descriptions[0], damage)
         if hp1 >= 50:
             hp2 = hp2 - damage
             print(descriptions[0], damage)
-    elif action == 1:
+    elif action == "1":
         hp2 = hp2 - damage
         print(descriptions[1], damage)
-        if (hp1 >= 30 and hp1 < 50) or first == 1:
+        if (hp1 >= 30 and hp1 < 50) or first == "1":
             hp2 = hp2 - damage
             print(descriptions[1], damage)
     else:
