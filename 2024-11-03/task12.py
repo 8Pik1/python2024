@@ -29,12 +29,14 @@ while not game_over:
         if hp1 >= 50:
             hp2 = hp2 - damage
             print(descriptions[0], damage)
-    if action == 1:
+    elif action == 1:
         hp2 = hp2 - damage
         print(descriptions[1], damage)
         if (hp1 >= 30 and hp1 < 50) or first == 1:
             hp2 = hp2 - damage
             print(descriptions[1], damage)
+    else:
+        print("Вы решили постоять на месте")
 
     if hp2 <= 0:
         game_over = True
