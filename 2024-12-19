@@ -1,0 +1,50 @@
+# Задание 1
+
+def most_frequent(nums):
+    count = {}
+    for num in nums:
+        if num in count:
+            count[num] += 1
+        else:
+            count[num] = 1
+    print(max(count, key=count.get))
+
+nums = [1, 2, 2, 3, 3, 3, 4]
+most_frequent(nums)
+
+
+# Задание 2
+
+
+def find_pairs(nums, target):
+    seen = set()
+    pairs = []
+    for num in nums:
+        diff = target - num
+        if diff in seen:
+            pairs.append((num, diff))
+        seen.add(num)
+    print(pairs)
+
+nums = [1, 2, 3, 4, 5]
+target = 5
+find_pairs(nums, target)
+
+
+# Задание 3
+
+
+def find_pairs(nums, target):
+    seen = set()
+    pairs = []
+    for num in nums:
+        diff = target - num
+        if diff in seen:
+            pairs.append((num, diff))
+        seen.add(num)
+    print(pairs)
+
+nums = [1, 2, 3, 4, 5]
+target = 5
+find_pairs(nums, target)
+
