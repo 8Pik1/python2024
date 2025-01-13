@@ -8,11 +8,11 @@ while i < n:
     i += 1
 print(num)
 
-res = []
-i = 0
-while i < n:
+i = n - 1
+while i >= 0:
     a = num[i]
-    if a % 3 == 0 and a % 7 != 0:
-        res.append(a)
-    i += 1
-print(res)
+    if not ( a % 3 == 0 and a % 7 != 0 ):
+        num.pop(i)
+    i -= 1
+print(num)
+
