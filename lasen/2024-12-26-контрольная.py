@@ -11,7 +11,8 @@ print(num)
 res = []
 i = 0
 while i < n:
-    if num[i] % 3 == 0 and num[i] % 7 != 0:
-        res.append(num[i])
+    a = num[i]
+    if a % 3 == 0 and a % 7 != 0:
+        res.append(a)
     i += 1
 print(res)
