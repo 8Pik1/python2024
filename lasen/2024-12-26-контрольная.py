@@ -1,10 +1,17 @@
 n = int(input("Введите N: "))
 
-res = []
+num = []
 i = 0
 while i < n:
     a = int(input())
-    if a % 3 == 0 and a % 7 != 0:
-        res.append(a)
+    num.append(a)
+    i += 1
+print(num)
+
+res = []
+i = 0
+while i < n:
+    if num[i] % 3 == 0 and num[i] % 7 != 0:
+        res.append(num[i])
     i += 1
 print(res)
